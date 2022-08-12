@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escrevendo na tela</title>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual é seu nome ?')
+        document.write(`Bem Vindo ${nome} <br>`)
+        document.write(`Seu nome tem ${nome.length} letras <br>`)
+        document.write(`Seu nome em maiúsculo ${nome.toUpperCase()} <br>`)
+        document.write(`Seu nome em minúsculo ${nome.toLowerCase()}`)
+
+        //Formatando Strings
+        // .lenght > quantos caracteres possue a palavra ou o texto em geral
+        // .toUpperCase() texto tudo MAIÚSCULO
+        // .toLowerCase() "" minúsculo
+
+        //Formatando Number
+        // .toFixed() para definir quantas casas decimais após a vírgula
+        // .replace(".",",") para converter o ponto em vírgula
+        // .toLocaleString('pt-BR', {style : 'currency', currency: 'BRL'})
+        // .toLocaleString('pt-BR', {style : 'currency', currency: 'EUR'})
+        // .toLocaleString('pt-BR', {style : 'currency', currency: 'USD'})
+    </script>
+</body>
+</html>

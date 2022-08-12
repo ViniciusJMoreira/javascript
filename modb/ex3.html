@@ -10,10 +10,24 @@
     <script>
         var n1 = Number(window.prompt('Digite o primeiro número :')) 
         var n2 = Number(window.prompt('Digite o segundo número :'))
+
+        //Conversões de TYPES
+
+        //NUMEROS
+        //Number.parseInt() converte para números inteiros
+        //Number.parseFloat() converte para números reais
+        //Number() aceita os dois TIPOS
+
+        //STRINGS
+        //String() converte para caracteres. OU
+        // ().toString()
+
         var soma = n1 + n2
+
+        // (string + string) <- concatenação (Number + Number) <- adição
+
         window.alert (`A soma entre ${n1} e ${n2} é igual a ${soma}`)
         // ou window.alert ('A soma entre ' + n1 + ' e ' + n2 + ' é ' + soma)
-        // + < concatenação
         // ${} < concatenação (dentro das ``)
     </script>
 </body>
