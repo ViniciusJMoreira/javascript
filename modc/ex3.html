@@ -35,18 +35,17 @@
 <body>
     <input type="number" class="input" name="" id="tn1"> <p>+</p>
     <input type="number" class="input" name="" id="tn2">
-    <div id="resultado" class="input" onclick="resultado()">
-        =
-    </div>
+    <div id="resultado" class="input" onclick="resultado()">=</div>
     <script>
         var res = document.getElementById('resultado')
+        
         function resultado() {
-          var tn1 = document.getElementById('tn1')
-          var tn2 = document.getElementById('tn2')
-          var n1 = Number(tn1.value)
-          var n2 = Number(tn2.value)
-          var s = n1 + n2
-          res.innerHTML = s
+            var tn1 = document.getElementById('tn1')
+            var tn2 = document.getElementById('tn2')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = s
         }
     </script>
 </body>
