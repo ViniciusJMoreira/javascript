@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            max-width: 100vw;
+            min-height: 100vh;
+            background-color: #000;
+            color: #fff;
+            font-size: 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn:hover {
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendendo usar o DOM com o <strong>Javascript</strong></h1>
+    <p>Aqui vem o resultado</p>
+    <div class="btn" onclick=" window.open('https://github.com/ViniciusJMoreira', '_blank')">Clique em mim</div>
+    <p id="second" >O Segundo resultado</p>
+    <script>
+
+        var corpo = window.document.body
+        corpo.style.background = '#050322'
+
+        var first = document.getElementsByTagName('p')[0]
+        first.style.background = '#000'
+        
+        var btn = document.querySelector('.btn')
+        btn.style.cursor = 'pointer'
+        btn.style.border = '2px solid'
+        btn.style.padding = '1.1em 0.7em'
+        btn.style.borderRadius = '30px'
+
+        var second = document.getElementById('second')
+        second.innerText = 'O segundo resultado'
+    </script>
+</body>
+</html>
