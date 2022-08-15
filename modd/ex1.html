@@ -4,16 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Condições</title>
+    <title>Operadores de Condições</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            max-width: 100vw;
+            min-height: 100vh;
+            background-color: #0d0425;
+            color: #fff;
+            font-size: 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+        .input-vel {
+            background-color: #9f5bdf;
+            color: #fff;
+            padding: 0.6em 1em;
+            border-radius: 10px;
+            border: inset 1px solid black;
+            text-align: center;
+            cursor: pointer;
+            margin: 10px;
+        }
+        div {
+            line-height: 30px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h1>Sistemas de Multa</h1>
-    Velocidade do carro : <input type="number" name="vel" id="vel"> km/h
-    <input type="button" value="Verificar" onclick="calcular()">
+    <div>
+        <label for="vel">Velocidade do carro :</label>
+        <input class="input-vel" type="number" name="vel" id="vel" min="1" max="500"
+        required> km/h
+    </div>
+    <button onclick="calcular()" class="input-vel">Calcular</button>
+    <div id="res"></div>
     <script>
-        var txtv = document.getElementById('vel')
+        function calcular() {
+            var txtv = document.querySelector('input#vel')
+            var vel = Number(txtv.value)
+            var res = document.querySelector('div#res')
+            
 
-        
+            if (vel > 70) {
+                res.innerHTML = `OPA, STOP <strong>${vel}KM/H</strong>: Voce ultrapassou o limite de 70km/h , <strong>MULTADO!</strong>`
+            }
+            if (vel <= 70) {
+                res.innerHTML = `Sua velocidade é de <strong>${vel}KM/H</strong>. Dirija com prudencia , BOA VIAGEM`
+            }
+            if (vel <= 0) {
+                res.innerHTML = `INFORME SUA VELOCIDADE`
+            }
+        }
     </script>
 </body>
 </html>
