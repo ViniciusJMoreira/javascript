@@ -56,8 +56,9 @@
 
             if (vel > 70) {
                 res.innerHTML = `OPA, STOP <strong>${vel}KM/H</strong>: Voce ultrapassou o limite de 70km/h , <strong>MULTADO!</strong>`
+                txtv.style.background = '#ff0000'
             }
-            if (vel <= 70) {
+            else {
                 res.innerHTML = `Sua velocidade é de <strong>${vel}KM/H</strong>. Dirija com prudencia , BOA VIAGEM`
             }
             if (vel <= 0) {

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/ex1.css">
+    <title>Desafio1</title>
+</head>
+<body>
+    <header>
+        <h1>Horário do Dia</h1>
+    </header>
+    <section>
+        <div id="hora-do-dia"></div>
+        <div class="div-img" id="div-img">
+            <img class="img" id="img" src="" alt="Foto do dia">
+        </div>
+    </section>
+    <footer>
+        <p>@Criado por <a href=""><strong>Vinícius</strong></a></p>
+    </footer>
+
+    <script>
+        const hour = new Date()
+        horas = hour.getHours()
+        const res = document.getElementById('hora-do-dia')
+        const ing = document.getElementById('img')
+
+        if (horas >= 0 && horas < 12){
+            res.innerHTML = `<p>São ${horas} horas. Bom - Dia!</p>`
+            document.body.style.background = '#6d7af3'
+            ing.src = 'ex1/manha.png'
+        }
+        else if (horas >= 12 && horas < 19) {
+            res.innerHTML = `<p>São ${horas} horas. Boa - Tarde!</p>`
+            document.body.style.background = '#ffb672'
+            ing.src = 'ex1/tarde.png'
+        }
+        else {
+            res.innerHTML = `<p>Sao ${horas} horas. Boa - Noite!</p>`
+            document.body.style.background = '#a7a7a7' //#a7a7a7
+            ing.src = 'ex1/noite.png'
+        }
+    </script>
+</body>
+</html>
