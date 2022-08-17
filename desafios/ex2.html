@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/ex2.css">
+    <title>Desafio 2</title>
+</head>
+<body>
+    <header>
+        <h1 class="title">Verificador de Idade</h1>
+    </header>
+    <section class="container">
+        <div class="div-verify">
+            <label for="year"><strong>Ano de Nascimento</strong> :
+                <input type="number" class="input-year" id="year-day" min="1920" max="2022" value="2020">
+            </label>
+        </div>
+        <div class="div-verify">
+            <p><strong>Sexo :</strong></p>
+            <label for="masculino">
+            <input type="radio" name="sexo" id="masculino" checked> Masculino
+            </label>
+            <label for="feminino">
+            <input type="radio" name="sexo" id="feminino"> Feminino
+            </label>
+        </div>
+        <button class="cont-center btn" id="outpt" onclick="verificar()">Verificar</button>
+        <div id="div-res-txt"></div>
+    </section>
+    <footer>
+        <p>@Criado por <a href="#"><strong>Vinícius</strong></a></p>
+    </footer>
+
+    <script src="js/ex2.js"></script>
+</body>
+</html>
