@@ -28,12 +28,10 @@
     <div class="btn" onclick=" window.open('https://github.com/ViniciusJMoreira', '_blank')">Clique em mim</div>
     <p id="second" >O Segundo resultado</p>
     <script>
+        
+        document.body.style.background = '#050322'
 
-        var corpo = window.document.body
-        corpo.style.background = '#050322'
-
-        var first = document.getElementsByTagName('p')[0]
-        first.style.fontSize = '1.5em'
+        document.getElementsByTagName('p')[0].style.fontSize = '1.5em'
         
         var btn = document.querySelector('.btn')
         btn.style.cursor = 'pointer'
